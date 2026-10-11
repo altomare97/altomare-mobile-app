@@ -1,0 +1,11 @@
+/* Ottimizzazioni per rendere l'app mobile fluida come un'app nativa */
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+}
+input, textarea {
+    -webkit-user-select: text;
+    user-select: text;
+}
