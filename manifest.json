@@ -1,6 +1,6 @@
 {
-  "name": "Meta Mobile App",
-  "short_name": "MetaApp",
+  "name": "CV & Portfolio App",
+  "short_name": "MioCV",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
