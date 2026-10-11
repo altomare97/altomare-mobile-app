@@ -32,9 +32,12 @@
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans pb-24">
 
-    <!-- Header Fisso in Alto -->
-    <header class="bg-[#1877F2] text-white p-4 sticky top-0 z-50 shadow-md flex justify-between items-center">
-        <h1 class="text-base font-bold tracking-wide"><i class="fa-solid fa-bolt mr-2"></i>CV & Portfolio</h1>
+    <!-- Header Fisso in Alto con la tua Immagine -->
+    <header class="bg-[#1877F2] text-white p-3 sticky top-0 z-50 shadow-md flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-full overflow-hidden border-2 border-white shadow-sm flex-shrink-0">
+            <img src="https://github.com/altomare97/altomare-mobile-app/blob/main/AA%20-%20Logo%20Sfondo%20Arancione.png?raw=true" alt="logo" class="w-full h-full object-cover">
+        </div>
+        <h1 class="text-base font-bold tracking-wide">CV & Portfolio</h1>
     </header>
 
     <!-- CONTENITORE SEZIONI (One Page) -->
@@ -51,23 +54,15 @@
                 <p id="profile-role" class="text-blue-600 font-semibold text-xs">...</p>
                 <p id="profile-city" class="text-xs text-gray-400 mt-1"></p>
 
-                <!-- Azioni Rapide -->
-                <div class="grid grid-cols-4 gap-2 mt-5">
-                    <a id="btn-call" href="#" class="flex flex-col items-center p-2 rounded-xl bg-gray-50 text-blue-600 hover:bg-blue-50">
-                        <i class="fa-solid fa-phone text-base"></i>
-                        <span class="text-[9px] mt-1 font-medium">Chiama</span>
+                <!-- Azioni Rapide (Solo Email e LinkedIn) -->
+                <div class="grid grid-cols-2 gap-3 mt-5">
+                    <a id="btn-email" href="#" class="flex flex-col items-center p-3 rounded-xl bg-gray-50 text-blue-600 hover:bg-blue-50 transition border border-gray-100">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                        <span class="text-[11px] mt-1 font-medium">Email</span>
                     </a>
-                    <a id="btn-email" href="#" class="flex flex-col items-center p-2 rounded-xl bg-gray-50 text-blue-600 hover:bg-blue-50">
-                        <i class="fa-solid fa-envelope text-base"></i>
-                        <span class="text-[9px] mt-1 font-medium">Email</span>
-                    </a>
-                    <a id="btn-whatsapp" href="#" target="_blank" class="flex flex-col items-center p-2 rounded-xl bg-gray-50 text-green-600 hover:bg-green-50">
-                        <i class="fa-brands fa-whatsapp text-base"></i>
-                        <span class="text-[9px] mt-1 font-medium">WhatsApp</span>
-                    </a>
-                    <a id="btn-linkedin" href="#" target="_blank" class="flex flex-col items-center p-2 rounded-xl bg-gray-50 text-blue-700 hover:bg-blue-50">
-                        <i class="fa-brands fa-linkedin-in text-base"></i>
-                        <span class="text-[9px] mt-1 font-medium">LinkedIn</span>
+                    <a id="btn-linkedin" href="#" target="_blank" class="flex flex-col items-center p-3 rounded-xl bg-gray-50 text-blue-700 hover:bg-blue-50 transition border border-gray-100">
+                        <i class="fa-brands fa-linkedin-in text-xl"></i>
+                        <span class="text-[11px] mt-1 font-medium">LinkedIn</span>
                     </a>
                 </div>
             </div>
@@ -153,9 +148,7 @@
             bio: "Professionista Senior nell'automazione industriale con competenze consolidate in C#, React.js e MongoDB. Unisco la solida esperienza in sistemi di controllo e robotica alla passione per lo sviluppo software, realizzando applicativi dinamici e ben integrati.",
             
             // Contatti
-            telefono: "+393000000000",
             email: "altomare1997@gmail.com",
-            whatsapp: "393000000000",
             linkedin: "https://www.linkedin.com/in/antonio-altomare-531095242",
 
             // Skill
@@ -198,9 +191,7 @@
             document.getElementById("profile-city").innerHTML = `<i class="fa-solid fa-location-dot mr-1"></i>${portfolioData.citta}`;
             document.getElementById("profile-bio").innerText = portfolioData.bio;
 
-            document.getElementById("btn-call").href = `tel:${portfolioData.telefono}`;
             document.getElementById("btn-email").href = `mailto:${portfolioData.email}`;
-            document.getElementById("btn-whatsapp").href = `https://wa.me/${portfolioData.whatsapp}`;
             document.getElementById("btn-linkedin").href = portfolioData.linkedin;
 
             // Skills
