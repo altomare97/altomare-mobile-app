@@ -3,94 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Meta Mobile App</title>
-    
-    <!-- Tailwind CSS per una grafica pulita e moderna -->
+    <title>Portfolio & CV Mobile</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- FontAwesome per le icone stile app mobile -->
+    <!-- FontAwesome icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Meta tags per trasformarla in una PWA (Aggiungi a Home) -->
+    <!-- CSS personalizzato -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- PWA meta tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#1877F2">
     <link rel="manifest" href="manifest.json">
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans select-none pb-20">
+<body class="bg-gray-100 text-gray-900 font-sans pb-24">
 
-    <!-- Header stile Meta / Facebook -->
+    <!-- Header Ffisso in Alto -->
     <header class="bg-[#1877F2] text-white p-4 sticky top-0 z-50 shadow-md flex justify-between items-center">
-        <h1 class="text-xl font-bold tracking-wide"><i class="fa-solid fa-bolt mr-2"></i>MetaApp</h1>
-        <div class="flex space-x-4">
-            <button class="bg-blue-600 p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-700 transition">
-                <i class="fa-solid fa-search"></i>
-            </button>
-            <button class="bg-blue-600 p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-700 transition">
-                <i class="fa-solid fa-bell"></i>
-            </button>
-        </div>
+        <h1 class="text-base font-bold tracking-wide"><i class="fa-solid fa-bolt mr-2"></i>Mio Portfolio</h1>
     </header>
 
-    <!-- Contenuto Principale -->
-    <main class="p-4 max-w-md mx-auto space-y-4">
-        
-        <!-- Card di Benvenuto -->
-        <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-200">
-            <div class="flex items-center space-x-3 mb-3">
-                <div class="w-12 h-12 bg-blue-100 text-[#1877F2] rounded-full flex items-center justify-center font-bold text-xl">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-                <div>
-                    <h2 class="font-bold text-lg">Benvenuto!</h2>
-                    <p class="text-xs text-gray-500">Installata come App sul telefono</p>
-                </div>
-            </div>
-            <p class="text-sm text-gray-600 mb-4">
-                Questa è la tua applicazione web ottimizzata per dispositivi mobili con grafica pulita. Puoi personalizzarla come preferisci direttamente modificando il codice su GitHub.
-            </p>
-            <button onclick="alert('Funziona perfettamente!')" class="w-full bg-[#1877F2] text-white font-semibold py-3 rounded-xl shadow hover:bg-blue-600 transition active:scale-95">
-                Cliccami
-            </button>
-        </div>
+    <!-- CONTENITORE SEZIONI (One Page dinamica) -->
+    <main class="p-4 max-w-md mx-auto">
 
-        <!-- Sezione Feed / Esempio lista -->
-        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200">
-            <h3 class="font-bold text-gray-700 mb-3 border-b pb-2">Sezione Aggiornamenti</h3>
-            <div class="space-y-3">
-                <div class="flex items-start space-x-3 p-2 hover:bg-gray-50 rounded-xl transition">
-                    <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center shrink-0">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-semibold">Render + GitHub</h4>
-                        <p class="text-xs text-gray-500">Il tuo server gratuito è attivo e aggiornato in tempo reale.</p>
-                    </div>
+        <!-- 1. SEZIONE HOME -->
+        <section id="section-home" class="space-y-4">
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 h-28 w-full rounded-2xl relative"></div>
+            <div class="bg-white rounded-3xl p-6 shadow-sm text-center -mt-16 relative z-10 border border-gray-100">
+                <div class="w-20 h-20 bg-blue-600 text-white rounded-full mx-auto flex items-center justify-center font-bold text-2xl border-4 border-white shadow">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <h2 id="profile-name" class="text-xl font-bold mt-3 text-gray-800">Caricamento...</h2>
+                <p id="profile-role" class="text-blue-600 font-semibold text-xs">...</p>
+                <p id="profile-city" class="text-xs text-gray-400 mt-1"></p>
+
+                <!-- Azioni Rapide -->
+                <div class="grid grid-cols-4 gap-2 mt-5">
+                    <a id="btn-call" href="#" class="flex flex-col items-center p-2 rounded-xl bg-gray-50 text-blue-600 hover:bg-blue-50">
+                        <i class="fa-solid fa-phone text-base"></i>
+                        <span class="text-[9px] mt-1 font-medium">Chiama</span>
+                    </a>
+                    <a id="btn-email" href="#" class="flex flex-col items-center p-2 rounded-xl bg-gray-50 text-blue-600 hover:bg-blue-50">
+                        <i class="fa-solid fa-envelope text-base"></i>
+                        <span class="text-[9px] mt-1 font-medium">Email</span>
+                    </a>
+                    <a id="btn-whatsapp" href="#" target="_blank" class="flex flex-col items-center p-2 rounded-xl bg-gray-50 text-green-600 hover:bg-green-50">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span class="text-[9px] mt-1 font-medium">WhatsApp</span>
+                    </a>
+                    <a id="btn-linkedin" href="#" target="_blank" class="flex flex-col items-center p-2 rounded-xl bg-gray-50 text-blue-700 hover:bg-blue-50">
+                        <i class="fa-brands fa-linkedin-in text-base"></i>
+                        <span class="text-[9px] mt-1 font-medium">LinkedIn</span>
+                    </a>
                 </div>
             </div>
-        </div>
+
+            <!-- Bio Card -->
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                <h3 class="text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Chi Sono</h3>
+                <p id="profile-bio" class="text-xs text-gray-600 leading-relaxed"></p>
+            </div>
+        </section>
+
+        <!-- 2. SEZIONE SKILL -->
+        <section id="section-skills" class="space-y-4 hidden">
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+                <h2 class="text-base font-bold text-gray-800 mb-3 flex items-center">
+                    <i class="fa-solid fa-code mr-2 text-blue-600"></i>Competenze Tecniche
+                </h2>
+                <div id="skills-list" class="flex flex-wrap gap-2">
+                    <!-- Popolato dinamicamente da JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SEZIONE ATTESTATI -->
+        <section id="section-attestati" class="space-y-4 hidden">
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+                <h2 class="text-base font-bold text-gray-800 mb-3 flex items-center">
+                    <i class="fa-solid fa-certificate mr-2 text-blue-600"></i>Attestati e Certificazioni
+                </h2>
+                <div id="attestati-list" class="space-y-3">
+                    <!-- Popolato dinamicamente da JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SEZIONE BLOG -->
+        <section id="section-blog" class="space-y-4 hidden">
+            <!-- Ultimo Articolo Pubblicato -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+                <span class="text-[10px] bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded-full">Ultimo Articolo</span>
+                <h2 id="latest-blog-title" class="text-sm font-bold text-gray-800 mt-2">Caricamento...</h2>
+                <p id="latest-blog-date" class="text-[10px] text-gray-400 mb-2"></p>
+                <p id="latest-blog-text" class="text-xs text-gray-600 leading-relaxed"></p>
+            </div>
+
+            <!-- Storico Articoli (Albero) -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+                <h3 class="text-xs font-bold text-gray-700 uppercase tracking-wider mb-3">Storico Articoli</h3>
+                <div id="blog-history" class="space-y-4 ml-1">
+                    <!-- Popolato dinamicamente da JS -->
+                </div>
+            </div>
+        </section>
 
     </main>
 
-    <!-- Bottom Navigation Bar (Stile App Nativa Meta/Mobile) -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-2 px-6 flex justify-around items-center z-50 shadow-lg">
-        <a href="#" class="flex flex-col items-center text-[#1877F2]">
-            <i class="fa-solid fa-house text-xl"></i>
+    <!-- BARRA DI NAVIGAZIONE IN BASSO (Pulsanti One Page) -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-2 px-4 flex justify-around items-center z-50 shadow-lg">
+        <button onclick="switchTab('home')" id="nav-home" class="flex flex-col items-center text-blue-600 transition">
+            <i class="fa-solid fa-house text-lg"></i>
             <span class="text-[10px] mt-1 font-medium">Home</span>
-        </a>
-        <a href="#" class="flex flex-col items-center text-gray-400 hover:text-gray-600">
-            <i class="fa-solid fa-video text-xl"></i>
-            <span class="text-[10px] mt-1 font-medium">Reels</span>
-        </a>
-        <a href="#" class="flex flex-col items-center text-gray-400 hover:text-gray-600">
-            <i class="fa-solid fa-store text-xl"></i>
-            <span class="text-[10px] mt-1 font-medium">Shop</span>
-        </a>
-        <a href="#" class="flex flex-col items-center text-gray-400 hover:text-gray-600">
-            <i class="fa-solid fa-bars text-xl"></i>
-            <span class="text-[10px] mt-1 font-medium">Menu</span>
-        </a>
+        </button>
+        <button onclick="switchTab('skills')" id="nav-skills" class="flex flex-col items-center text-gray-400 hover:text-gray-600 transition">
+            <i class="fa-solid fa-code text-lg"></i>
+            <span class="text-[10px] mt-1 font-medium">Skill</span>
+        </button>
+        <button onclick="switchTab('attestati')" id="nav-attestati" class="flex flex-col items-center text-gray-400 hover:text-gray-600 transition">
+            <i class="fa-solid fa-certificate text-lg"></i>
+            <span class="text-[10px] mt-1 font-medium">Attestati</span>
+        </button>
+        <button onclick="switchTab('blog')" id="nav-blog" class="flex flex-col items-center text-gray-400 hover:text-gray-600 transition">
+            <i class="fa-solid fa-newspaper text-lg"></i>
+            <span class="text-[10px] mt-1 font-medium">Blog</span>
+        </button>
     </nav>
 
+    <!-- Script principale -->
+    <script src="js/app.js"></script>
 </body>
 </html>
