@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CV & Portfolio App</title>
+    <title>Antonio Altomare | Software Engineer</title>
 
-    <!-- Tailwind CSS (Grafica) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome (Icone Mobile) -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Inter per un look pulito e tech) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Meta Tags PWA (Aggiungi a Home su Smartphone) -->
+    <!-- Meta PWA -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#1877F2">
+    <meta name="theme-color" content="#0f172a">
     <link rel="manifest" href="manifest.json">
 
-    <!-- Stili e Ottimizzazioni Mobile Native -->
     <style>
         body {
+            font-family: 'Inter', sans-serif;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             user-select: none;
@@ -30,57 +32,69 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans pb-24">
+<body class="bg-slate-900 text-slate-100 min-h-full pb-28 selection:bg-blue-500 selection:text-white">
 
-    <!-- Header Fisso in Alto con la tua Immagine -->
-    <header class="bg-[#1877F2] text-white p-3 sticky top-0 z-50 shadow-md flex items-center space-x-3">
-        <div class="w-9 h-9 rounded-full overflow-hidden border-2 border-white shadow-sm flex-shrink-0">
-            <img src="https://github.com/altomare97/altomare-mobile-app/blob/main/AA%20-%20Logo%20Sfondo%20Arancione.png?raw=true" alt="logo" class="w-full h-full object-cover">
+    <!-- Top Navigation / Header Professionale -->
+    <header class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-full overflow-hidden border border-slate-700 shadow-sm flex-shrink-0">
+                <img src="https://github.com/altomare97/altomare-mobile-app/blob/main/AA%20-%20Logo%20Sfondo%20Arancione.png?raw=true" alt="logo" class="w-full h-full object-cover">
+            </div>
+            <span class="text-sm font-semibold tracking-tight text-slate-200">Antonio Altomare</span>
         </div>
-        <h1 class="text-base font-bold tracking-wide">CV & Portfolio</h1>
+        <div class="flex items-center space-x-2">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                <span class="w-1.5 h-1.5 mr-1.5 bg-blue-400 rounded-full animate-pulse"></span> Online
+            </span>
+        </div>
     </header>
 
-    <!-- CONTENITORE SEZIONI (One Page) -->
-    <main class="p-4 max-w-md mx-auto">
+    <!-- Main Container -->
+    <main class="p-4 max-w-md mx-auto space-y-4">
 
         <!-- 1. SEZIONE HOME -->
         <section id="section-home" class="space-y-4">
-            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 h-28 w-full rounded-2xl relative"></div>
-            <div class="bg-white rounded-3xl p-6 shadow-sm text-center -mt-16 relative z-10 border border-gray-100">
-                <div class="w-20 h-20 bg-blue-600 text-white rounded-full mx-auto flex items-center justify-center font-bold text-2xl border-4 border-white shadow overflow-hidden">
-                    <img src="https://github.com/altomare97/altomare-mobile-app/blob/main/AA%20-%20Logo%20Sfondo%20Arancione.png?raw=true" alt="logo" class="w-full h-full object-cover">
+            <!-- Profile Card -->
+            <div class="bg-slate-800/60 backdrop-blur border border-slate-700/60 rounded-2xl p-6 text-center shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-400"></div>
+                
+                <div class="w-24 h-24 rounded-full mx-auto p-1 bg-slate-700/50 border border-slate-600 shadow-inner mb-4 overflow-hidden">
+                    <img src="https://github.com/altomare97/altomare-mobile-app/blob/main/AA%20-%20Logo%20Sfondo%20Arancione.png?raw=true" alt="logo" class="w-full h-full object-cover rounded-full">
                 </div>
-                <h2 id="profile-name" class="text-xl font-bold mt-3 text-gray-800">Caricamento...</h2>
-                <p id="profile-role" class="text-blue-600 font-semibold text-xs">...</p>
-                <p id="profile-city" class="text-xs text-gray-400 mt-1"></p>
 
-                <!-- Azioni Rapide (Solo Email e LinkedIn) -->
-                <div class="grid grid-cols-2 gap-3 mt-5">
-                    <a id="btn-email" href="#" class="flex flex-col items-center p-3 rounded-xl bg-gray-50 text-blue-600 hover:bg-blue-50 transition border border-gray-100">
-                        <i class="fa-solid fa-envelope text-xl"></i>
-                        <span class="text-[11px] mt-1 font-medium">Email</span>
+                <h1 id="profile-name" class="text-lg font-bold text-white tracking-tight">Caricamento...</h1>
+                <p id="profile-role" class="text-blue-400 font-medium text-xs mt-0.5">...</p>
+                <p id="profile-city" class="text-xs text-slate-400 mt-1 flex items-center justify-center"></p>
+
+                <!-- Azioni Rapide (Email & LinkedIn Minimali) -->
+                <div class="grid grid-cols-2 gap-2.5 mt-6">
+                    <a id="btn-email" href="#" class="flex items-center justify-center space-x-2 py-2.5 px-3 rounded-xl bg-slate-700/50 hover:bg-slate-700 text-slate-200 text-xs font-medium border border-slate-600/60 transition">
+                        <i class="fa-solid fa-envelope text-blue-400"></i>
+                        <span>Email</span>
                     </a>
-                    <a id="btn-linkedin" href="#" target="_blank" class="flex flex-col items-center p-3 rounded-xl bg-gray-50 text-blue-700 hover:bg-blue-50 transition border border-gray-100">
-                        <i class="fa-brands fa-linkedin-in text-xl"></i>
-                        <span class="text-[11px] mt-1 font-medium">LinkedIn</span>
+                    <a id="btn-linkedin" href="#" target="_blank" class="flex items-center justify-center space-x-2 py-2.5 px-3 rounded-xl bg-slate-700/50 hover:bg-slate-700 text-slate-200 text-xs font-medium border border-slate-600/60 transition">
+                        <i class="fa-brands fa-linkedin-in text-blue-400"></i>
+                        <span>LinkedIn</span>
                     </a>
                 </div>
             </div>
 
-            <!-- Bio Card -->
-            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-                <h3 class="text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Chi Sono</h3>
-                <p id="profile-bio" class="text-xs text-gray-600 leading-relaxed"></p>
+            <!-- About / Bio -->
+            <div class="bg-slate-800/60 backdrop-blur border border-slate-700/60 rounded-2xl p-5 shadow-sm">
+                <h2 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2 flex items-center">
+                    <i class="fa-solid fa-user-gear mr-2 text-blue-400"></i>Profilo Professionale
+                </h2>
+                <p id="profile-bio" class="text-xs text-slate-300 leading-relaxed font-light"></p>
             </div>
         </section>
 
         <!-- 2. SEZIONE SKILL -->
         <section id="section-skills" class="space-y-4 hidden">
-            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-                <h2 class="text-base font-bold text-gray-800 mb-3 flex items-center">
-                    <i class="fa-solid fa-code mr-2 text-blue-600"></i>Competenze Tecniche
+            <div class="bg-slate-800/60 backdrop-blur border border-slate-700/60 rounded-2xl p-5 shadow-sm">
+                <h2 class="text-sm font-semibold text-white mb-4 flex items-center">
+                    <i class="fa-solid fa-terminal mr-2 text-blue-400"></i>Competenze Tecniche & Stack
                 </h2>
-                <div id="skills-list" class="flex flex-wrap gap-2">
+                <div id="skills-list" class="grid grid-cols-2 gap-2.5">
                     <!-- Popolato dinamicamente da JS -->
                 </div>
             </div>
@@ -88,9 +102,9 @@
 
         <!-- 3. SEZIONE ATTESTATI -->
         <section id="section-attestati" class="space-y-4 hidden">
-            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-                <h2 class="text-base font-bold text-gray-800 mb-3 flex items-center">
-                    <i class="fa-solid fa-certificate mr-2 text-blue-600"></i>Attestati e Certificazioni
+            <div class="bg-slate-800/60 backdrop-blur border border-slate-700/60 rounded-2xl p-5 shadow-sm">
+                <h2 class="text-sm font-semibold text-white mb-4 flex items-center">
+                    <i class="fa-solid fa-award mr-2 text-blue-400"></i>Certificazioni & Qualifiche
                 </h2>
                 <div id="attestati-list" class="space-y-3">
                     <!-- Popolato dinamicamente da JS -->
@@ -100,18 +114,20 @@
 
         <!-- 4. SEZIONE BLOG -->
         <section id="section-blog" class="space-y-4 hidden">
-            <!-- Ultimo Articolo Pubblicato -->
-            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-                <span class="text-[10px] bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded-full">Ultimo Articolo</span>
-                <h2 id="latest-blog-title" class="text-sm font-bold text-gray-800 mt-2">Caricamento...</h2>
-                <p id="latest-blog-date" class="text-[10px] text-gray-400 mb-2"></p>
-                <p id="latest-blog-text" class="text-xs text-gray-600 leading-relaxed"></p>
+            <!-- Ultimo Articolo -->
+            <div class="bg-slate-800/60 backdrop-blur border border-slate-700/60 rounded-2xl p-5 shadow-sm relative overflow-hidden">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-[10px] bg-blue-500/10 text-blue-400 font-semibold px-2.5 py-0.5 rounded-full border border-blue-500/20">In Evidenza</span>
+                    <span id="latest-blog-date" class="text-[10px] text-slate-400"></span>
+                </div>
+                <h2 id="latest-blog-title" class="text-sm font-bold text-white mb-2 tracking-tight"></h2>
+                <p id="latest-blog-text" class="text-xs text-slate-300 leading-relaxed font-light"></p>
             </div>
 
-            <!-- Storico Articoli (Albero) -->
-            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-                <h3 class="text-xs font-bold text-gray-700 uppercase tracking-wider mb-3">Storico Articoli</h3>
-                <div id="blog-history" class="space-y-4 ml-1">
+            <!-- Storico -->
+            <div class="bg-slate-800/60 backdrop-blur border border-slate-700/60 rounded-2xl p-5 shadow-sm">
+                <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Archivio Articoli</h3>
+                <div id="blog-history" class="space-y-4">
                     <!-- Popolato dinamicamente da JS -->
                 </div>
             </div>
@@ -119,27 +135,27 @@
 
     </main>
 
-    <!-- BARRA DI NAVIGAZIONE IN BASSO -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-2 px-4 flex justify-around items-center z-50 shadow-lg">
-        <button onclick="switchTab('home')" id="nav-home" class="flex flex-col items-center text-blue-600 transition">
-            <i class="fa-solid fa-house text-lg"></i>
+    <!-- Bottom Navigation Bar (Minimal Dark) -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-slate-900/90 backdrop-blur-lg border-t border-slate-800 py-2 px-6 flex justify-around items-center z-50">
+        <button onclick="switchTab('home')" id="nav-home" class="flex flex-col items-center text-blue-400 transition py-1">
+            <i class="fa-solid fa-house text-base"></i>
             <span class="text-[10px] mt-1 font-medium">Home</span>
         </button>
-        <button onclick="switchTab('skills')" id="nav-skills" class="flex flex-col items-center text-gray-400 hover:text-gray-600 transition">
-            <i class="fa-solid fa-code text-lg"></i>
+        <button onclick="switchTab('skills')" id="nav-skills" class="flex flex-col items-center text-slate-400 hover:text-slate-200 transition py-1">
+            <i class="fa-solid fa-code text-base"></i>
             <span class="text-[10px] mt-1 font-medium">Skill</span>
         </button>
-        <button onclick="switchTab('attestati')" id="nav-attestati" class="flex flex-col items-center text-gray-400 hover:text-gray-600 transition">
-            <i class="fa-solid fa-certificate text-lg"></i>
+        <button onclick="switchTab('attestati')" id="nav-attestati" class="flex flex-col items-center text-slate-400 hover:text-slate-200 transition py-1">
+            <i class="fa-solid fa-certificate text-base"></i>
             <span class="text-[10px] mt-1 font-medium">Attestati</span>
         </button>
-        <button onclick="switchTab('blog')" id="nav-blog" class="flex flex-col items-center text-gray-400 hover:text-gray-600 transition">
-            <i class="fa-solid fa-newspaper text-lg"></i>
+        <button onclick="switchTab('blog')" id="nav-blog" class="flex flex-col items-center text-slate-400 hover:text-slate-200 transition py-1">
+            <i class="fa-solid fa-newspaper text-base"></i>
             <span class="text-[10px] mt-1 font-medium">Blog</span>
         </button>
     </nav>
 
-    <!-- DATI DEL CV E LOGICA JAVASCRIPT INTEGRATA -->
+    <!-- LOGICA JS E DATI -->
     <script>
         const portfolioData = {
             nome: "Antonio Altomare",
@@ -147,11 +163,9 @@
             citta: "Molfetta, Italia",
             bio: "Professionista Senior nell'automazione industriale con competenze consolidate in C#, React.js e MongoDB. Unisco la solida esperienza in sistemi di controllo e robotica alla passione per lo sviluppo software, realizzando applicativi dinamici e ben integrati.",
             
-            // Contatti
             email: "altomare1997@gmail.com",
             linkedin: "https://www.linkedin.com/in/antonio-altomare-531095242",
 
-            // Skill
             skills: [
                 { nome: "PLC", livello: "Avanzato" },
                 { nome: "Robot", livello: "Avanzato" },
@@ -160,14 +174,12 @@
                 { nome: "Mongo DB", livello: "Avanzato" }
             ],
 
-            // Attestati / Certificazioni
             attestati: [
                 { titolo: "Certificazione Robot Kuka", ente: "KUKA", anno: "2023" },
                 { titolo: "Certificazione Robot Staubli Val3", ente: "STAUBLI", anno: "2022" },
                 { titolo: "Certificazione Robot Comau", ente: "Comau", anno: "2021" }
             ],
 
-            // Articoli del Blog
             articoli: [
                 {
                     id: 1,
@@ -182,31 +194,37 @@
                     testo: "Un design pulito, sezioni immediate e zero tempi di caricamento rendono l'esperienza utente impeccabile su smartphone."
                 }
             ]
-        }; // <-- ECCO LA PARENTESI CHIUSA CORRETTAMENTE!
+        };
 
-        // RENDER DINAMICO
         document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("profile-name").innerText = portfolioData.nome;
             document.getElementById("profile-role").innerText = portfolioData.ruolo;
-            document.getElementById("profile-city").innerHTML = `<i class="fa-solid fa-location-dot mr-1"></i>${portfolioData.citta}`;
+            document.getElementById("profile-city").innerHTML = `<i class="fa-solid fa-location-dot mr-1.5 text-blue-400"></i>${portfolioData.citta}`;
             document.getElementById("profile-bio").innerText = portfolioData.bio;
 
             document.getElementById("btn-email").href = `mailto:${portfolioData.email}`;
             document.getElementById("btn-linkedin").href = portfolioData.linkedin;
 
-            // Skills
+            // Skills (Card tecniche minimali)
             const skillsContainer = document.getElementById("skills-list");
             portfolioData.skills.forEach(s => {
-                skillsContainer.innerHTML += `<span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-xl">${s.nome} (${s.livello})</span>`;
+                skillsContainer.innerHTML += `
+                    <div class="bg-slate-900/50 border border-slate-700/50 p-2.5 rounded-xl flex justify-between items-center">
+                        <span class="text-xs font-medium text-slate-200">${s.nome}</span>
+                        <span class="text-[10px] text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded-md font-mono">${s.livello}</span>
+                    </div>`;
             });
 
-            // Attestati
+            // Attestati (Stile timeline / card pulita)
             const attestatiContainer = document.getElementById("attestati-list");
             portfolioData.attestati.forEach(a => {
                 attestatiContainer.innerHTML += `
-                    <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
-                        <span class="text-[10px] text-blue-600 font-bold">${a.anno} - ${a.ente}</span>
-                        <h3 class="text-xs font-bold text-gray-800 mt-0.5">${a.titolo}</h3>
+                    <div class="p-3 bg-slate-900/50 rounded-xl border border-slate-700/50 flex justify-between items-center">
+                        <div>
+                            <h3 class="text-xs font-semibold text-slate-200">${a.titolo}</h3>
+                            <p class="text-[10px] text-slate-400 mt-0.5">${a.ente}</p>
+                        </div>
+                        <span class="text-[10px] font-mono text-blue-400 bg-slate-800 px-2 py-1 rounded-lg border border-slate-700">${a.anno}</span>
                     </div>`;
             });
 
@@ -221,27 +239,27 @@
                 for(let i = 1; i < portfolioData.articoli.length; i++) {
                     let art = portfolioData.articoli[i];
                     historyContainer.innerHTML += `
-                        <div class="border-l-2 border-gray-200 pl-3 py-1">
-                            <span class="text-[10px] text-gray-400">${art.data}</span>
-                            <h4 class="text-xs font-bold text-gray-700">${art.titolo}</h4>
-                            <p class="text-[11px] text-gray-500 mt-0.5">${art.testo}</p>
+                        <div class="border-l border-slate-700 pl-3 py-0.5">
+                            <span class="text-[10px] text-slate-400 font-mono">${art.data}</span>
+                            <h4 class="text-xs font-semibold text-slate-200 mt-0.5">${art.titolo}</h4>
+                            <p class="text-[11px] text-slate-400 mt-1 font-light leading-relaxed">${art.testo}</p>
                         </div>`;
                 }
             }
         });
 
-        // CAMBIO SCHEDA (Tab switching)
+        // Tab Switching
         function switchTab(tabId) {
             const tabs = ['home', 'skills', 'attestati', 'blog'];
             tabs.forEach(t => {
                 document.getElementById(`section-${t}`).classList.add('hidden');
-                document.getElementById(`nav-${t}`).classList.remove('text-blue-600');
-                document.getElementById(`nav-${t}`).classList.add('text-gray-400');
+                document.getElementById(`nav-${t}`).classList.remove('text-blue-400');
+                document.getElementById(`nav-${t}`).classList.add('text-slate-400');
             });
 
             document.getElementById(`section-${tabId}`).classList.remove('hidden');
-            document.getElementById(`nav-${tabId}`).classList.remove('text-gray-400');
-            document.getElementById(`nav-${tabId}`).classList.add('text-blue-600');
+            document.getElementById(`nav-${tabId}`).classList.remove('text-slate-400');
+            document.getElementById(`nav-${tabId}`).classList.add('text-blue-400');
             window.scrollTo(0, 0);
         }
     </script>
